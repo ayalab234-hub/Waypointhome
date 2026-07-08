@@ -194,19 +194,27 @@ height:88px;
 
 .logo{
 
-font-size:34px;
+display:flex;
 
-font-family:'Cormorant Garamond',serif;
-
-font-weight:700;
-
-color:var(--navy);
+align-items:center;
 
 }
 
-.logo span{
+.logo img{
 
-color:var(--copper);
+height:70px;
+
+width:auto;
+
+display:block;
+
+transition:0.3s ease;
+
+}
+
+.logo img:hover{
+
+transform:scale(1.02);
 
 }
 
