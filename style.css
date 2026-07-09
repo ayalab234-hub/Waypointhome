@@ -163,10 +163,6 @@ margin-bottom:20px;
 
 }
 
-/*======================================================
-HEADER
-======================================================*/
-
 /* ==========================================
 HEADER
 ========================================== */
@@ -183,11 +179,13 @@ width:100%;
 
 z-index:1000;
 
-background:#ffffff;
+background:rgba(247,243,238,.94);
+
+backdrop-filter:blur(14px);
+
+border-bottom:1px solid rgba(16,40,71,.08);
 
 padding:18px 0;
-
-box-shadow:0 2px 18px rgba(0,0,0,.05);
 
 }
 header .container{
