@@ -635,16 +635,16 @@ color:rgba(255,255,255,.82);
 }
 
 /*=====================================================
-ASSESSMENT
+CONSULTATION
 =====================================================*/
 
-.assessment{
+.consultation{
 
 background:var(--cream2);
 
 }
 
-.assessment-wrapper {
+.consultation-wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 90px;
@@ -659,13 +659,13 @@ box-shadow:var(--shadow);
 
 }
 
-.assessment-list{
+.consultation-list{
 
 margin:35px 0;
 
 }
 
-.assessment-list li{
+.consultation-list li{
 
 margin-bottom:18px;
 
@@ -674,29 +674,29 @@ font-size:17px;
 color:var(--text);
 
 }
-.assessment-text h2 {
+.consultation-text h2 {
     margin-bottom: 32px;
     line-height: 1.05;
 }
-.assessment-text p {
+.consultation-text p {
     margin-bottom: 30px;
     max-width: 900px;
     line-height: 1.8;
 }
-.assessment-list {
+.consultation-list {
     margin: 35px 0 45px;
     padding-left: 0;
 }
 
-.assessment-list li {
+.consultation-list li {
     margin-bottom: 16px;
     font-size: 20px;
     line-height: 1.6;
 }
-.assessment-text .button-primary {
+.consultation-text .button-primary {
     margin-top: 20px;
 }
-.assessment-text {
+.consultation-text {
     max-width: 760px;
 }
 /*=====================================================
