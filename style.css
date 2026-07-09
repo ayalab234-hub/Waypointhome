@@ -644,19 +644,12 @@ background:var(--cream2);
 
 }
 
-.assessment-wrapper{
-
-display:grid;
-
-grid-template-columns:1.1fr .9fr;
-
-gap:70px;
-
-align-items:center;
-
+.assessment-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 90px;
+    align-items: center;
 }
-
-.assessment-photo img{
 
 width:100%;
 
@@ -681,7 +674,31 @@ font-size:17px;
 color:var(--text);
 
 }
+.assessment-text h2 {
+    margin-bottom: 32px;
+    line-height: 1.05;
+}
+.assessment-text p {
+    margin-bottom: 30px;
+    max-width: 900px;
+    line-height: 1.8;
+}
+.assessment-list {
+    margin: 35px 0 45px;
+    padding-left: 0;
+}
 
+.assessment-list li {
+    margin-bottom: 16px;
+    font-size: 20px;
+    line-height: 1.6;
+}
+.assessment-text .button-primary {
+    margin-top: 20px;
+}
+.assessment-text {
+    max-width: 760px;
+}
 /*=====================================================
 CONTACT
 =====================================================*/
