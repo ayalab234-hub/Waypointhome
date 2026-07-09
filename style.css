@@ -78,8 +78,9 @@ list-style:none;
 
 .container{
 
-width:min(92%,var(--container));
-margin:auto;
+max-width:1200px;
+width:92%;
+margin:0 auto;
 
 }
 
@@ -168,17 +169,19 @@ HEADER
 
 header{
 
-position:fixed;
-
+position:sticky;
 top:0;
-
-left:0;
-
-width:100%;
-
 z-index:1000;
 
-padding:18px 0;
+background:rgba(255,255,255,.96);
+
+backdrop-filter:blur(12px);
+
+border-bottom:1px solid rgba(0,0,0,.06);
+
+padding:12px 0;
+
+}
 
 background:rgba(255,255,255,.92);
 
@@ -196,8 +199,9 @@ align-items:center;
 
 justify-content:space-between;
 
-}
+gap:40px;
 
+}
 /*======================================================
 LOGO
 ======================================================*/
@@ -214,14 +218,13 @@ flex-shrink:0;
 
 .logo img{
 
-width:220px;
+width:165px;
 
 height:auto;
 
 display:block;
 
 }
-
 /*======================================================
 NAVIGATION
 ======================================================*/
@@ -230,9 +233,9 @@ nav ul{
 
 display:flex;
 
-gap:40px;
-
 align-items:center;
+
+gap:38px;
 
 }
 
@@ -370,9 +373,9 @@ background:white;
 
 .hero-content{
 
-padding-left:5%;
+max-width:560px;
 
-max-width:650px;
+padding-left:40px;
 
 }
 
@@ -434,13 +437,7 @@ flex-wrap:wrap;
 
 .hero-image{
 
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-padding-right:5%;
+padding-right:40px;
 
 }
 
@@ -448,13 +445,12 @@ padding-right:5%;
 
 width:100%;
 
-max-width:650px;
+max-width:600px;
 
-border-radius:24px;
-
-box-shadow:var(--shadow);
+border-radius:22px;
 
 }
+
 /*======================================================
 HOW IT WORKS
 ======================================================*/
