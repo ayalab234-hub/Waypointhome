@@ -640,64 +640,82 @@ CONSULTATION
 
 .consultation{
 
-background:var(--cream2);
+padding:140px 0;
+
+background:var(--cream);
 
 }
 
-.consultation-wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 90px;
-    align-items: center;
+.consultation-wrapper{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:110px;
+
+align-items:center;
+
 }
 
-width:100%;
+.consultation-text{
 
-border-radius:24px;
+max-width:720px;
 
-box-shadow:var(--shadow);
+}
+
+.consultation-text h2{
+
+font-size:72px;
+
+margin-bottom:35px;
+
+line-height:1.05;
+
+}
+
+.consultation-text p{
+
+font-size:22px;
+
+line-height:1.8;
+
+margin-bottom:40px;
+
+color:var(--gray);
 
 }
 
 .consultation-list{
 
-margin:35px 0;
+margin-bottom:45px;
 
 }
 
 .consultation-list li{
 
-margin-bottom:18px;
+font-size:21px;
 
-font-size:17px;
+margin-bottom:16px;
 
-color:var(--text);
+line-height:1.7;
 
-}
-.consultation-text h2 {
-    margin-bottom: 32px;
-    line-height: 1.05;
-}
-.consultation-text p {
-    margin-bottom: 30px;
-    max-width: 900px;
-    line-height: 1.8;
-}
-.consultation-list {
-    margin: 35px 0 45px;
-    padding-left: 0;
 }
 
-.consultation-list li {
-    margin-bottom: 16px;
-    font-size: 20px;
-    line-height: 1.6;
+.consultation-text .button-primary{
+
+margin-top:10px;
+
 }
-.consultation-text .button-primary {
-    margin-top: 20px;
-}
-.consultation-text {
-    max-width: 760px;
+
+.consultation-photo img{
+
+width:100%;
+
+border-radius:28px;
+
+box-shadow:0 25px 60px rgba(0,0,0,.12);
+
 }
 /*=====================================================
 CONTACT
