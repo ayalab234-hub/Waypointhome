@@ -179,13 +179,13 @@ width:100%;
 
 z-index:1000;
 
-background:rgba(247,243,238,.94);
-
-backdrop-filter:blur(14px);
+background:#F7F3EE;
 
 border-bottom:1px solid rgba(16,40,71,.08);
 
 padding:18px 0;
+
+box-shadow:0 4px 20px rgba(0,0,0,.05);
 
 }
 header .container{
