@@ -1,41 +1,36 @@
-/* =====================================================
-   WAYPOINT HOME
-   Premium Website v2
-===================================================== */
-
-/* Google Fonts */
+/*======================================================
+WAYPOINT HOME
+Premium Landing Page
+======================================================*/
 
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
 
-
-/* =====================================================
+/*======================================================
 ROOT
-===================================================== */
+======================================================*/
 
 :root{
 
 --navy:#102847;
 --copper:#B78550;
 --white:#ffffff;
---light:#f7f5f2;
---gray:#6e7782;
---dark:#27313b;
+--light:#F8F6F3;
+--gray:#667085;
+--dark:#1D2939;
 
---shadow:
-0 25px 60px rgba(0,0,0,.10);
+--shadow:0 20px 60px rgba(0,0,0,.08);
 
---radius:22px;
+--radius:18px;
 
 --transition:.35s ease;
 
---max-width:1400px;
+--container:1320px;
 
 }
 
-
-/* =====================================================
+/*======================================================
 RESET
-===================================================== */
+======================================================*/
 
 *{
 
@@ -56,8 +51,8 @@ body{
 font-family:'Inter',sans-serif;
 background:var(--light);
 color:var(--dark);
+line-height:1.7;
 overflow-x:hidden;
-line-height:1.8;
 
 }
 
@@ -83,15 +78,14 @@ list-style:none;
 
 .container{
 
-width:min(92%,var(--max-width));
+width:min(92%,var(--container));
 margin:auto;
 
 }
 
-
-/* =====================================================
+/*======================================================
 TYPOGRAPHY
-===================================================== */
+======================================================*/
 
 h1,h2,h3{
 
@@ -103,42 +97,50 @@ color:var(--navy);
 
 h1{
 
-font-size:84px;
+font-size:74px;
 line-height:.95;
 
 }
 
 h2{
 
-font-size:58px;
-margin-bottom:25px;
+font-size:54px;
+margin-bottom:20px;
 
 }
 
 h3{
 
-font-size:34px;
+font-size:30px;
 
 }
 
 p{
 
-font-size:19px;
+font-size:18px;
 color:var(--gray);
 
 }
 
 section{
 
-padding:120px 0;
+padding:110px 0;
 
 }
 
 .section-header{
 
 max-width:760px;
-margin:auto auto 80px;
+margin:auto;
 text-align:center;
+margin-bottom:70px;
+
+}
+
+.section-subtitle{
+
+font-size:20px;
+margin-top:10px;
 
 }
 
@@ -148,11 +150,11 @@ display:inline-block;
 
 font-size:13px;
 
+font-weight:700;
+
 letter-spacing:3px;
 
 text-transform:uppercase;
-
-font-weight:700;
 
 color:var(--copper);
 
@@ -160,10 +162,9 @@ margin-bottom:20px;
 
 }
 
-
-/* =====================================================
+/*======================================================
 HEADER
-===================================================== */
+======================================================*/
 
 header{
 
@@ -177,9 +178,13 @@ width:100%;
 
 z-index:1000;
 
-padding:28px 0;
+padding:18px 0;
 
-transition:.35s;
+background:rgba(255,255,255,.92);
+
+backdrop-filter:blur(16px);
+
+border-bottom:1px solid rgba(0,0,0,.05);
 
 }
 
@@ -187,16 +192,15 @@ header .container{
 
 display:flex;
 
-justify-content:space-between;
-
 align-items:center;
+
+justify-content:space-between;
 
 }
 
-
-/* =====================================================
+/*======================================================
 LOGO
-===================================================== */
+======================================================*/
 
 .logo{
 
@@ -204,36 +208,29 @@ display:flex;
 
 align-items:center;
 
+flex-shrink:0;
+
 }
 
 .logo img{
 
-width:250px;
+width:220px;
 
 height:auto;
 
-transition:.35s;
-
-filter:drop-shadow(0 8px 20px rgba(0,0,0,.20));
+display:block;
 
 }
 
-.logo img:hover{
-
-transform:scale(1.02);
-
-}
-
-
-/* =====================================================
+/*======================================================
 NAVIGATION
-===================================================== */
+======================================================*/
 
 nav ul{
 
 display:flex;
 
-gap:45px;
+gap:40px;
 
 align-items:center;
 
@@ -243,15 +240,13 @@ nav a{
 
 font-weight:600;
 
-font-size:16px;
+font-size:15px;
 
-letter-spacing:.3px;
-
-color:white;
-
-transition:.35s;
+transition:.3s;
 
 position:relative;
+
+color:var(--navy);
 
 }
 
@@ -267,17 +262,17 @@ content:"";
 
 position:absolute;
 
-bottom:-8px;
-
 left:0;
 
-height:2px;
+bottom:-6px;
 
 width:0;
 
+height:2px;
+
 background:var(--copper);
 
-transition:.35s;
+transition:.3s;
 
 }
 
@@ -287,10 +282,9 @@ width:100%;
 
 }
 
-
-/* =====================================================
+/*======================================================
 BUTTONS
-===================================================== */
+======================================================*/
 
 .button-primary{
 
@@ -300,7 +294,7 @@ align-items:center;
 
 justify-content:center;
 
-padding:18px 36px;
+padding:16px 30px;
 
 background:var(--copper);
 
@@ -310,17 +304,15 @@ border-radius:999px;
 
 font-weight:600;
 
-box-shadow:var(--shadow);
+transition:.3s;
 
-transition:.35s;
+box-shadow:var(--shadow);
 
 }
 
 .button-primary:hover{
 
-transform:translateY(-5px);
-
-background:#9d6f3d;
+transform:translateY(-3px);
 
 }
 
@@ -328,110 +320,91 @@ background:#9d6f3d;
 
 display:inline-flex;
 
-padding:18px 36px;
+align-items:center;
 
-border:2px solid rgba(255,255,255,.35);
+justify-content:center;
 
-color:white;
+padding:16px 30px;
+
+border:2px solid var(--navy);
+
+color:var(--navy);
 
 border-radius:999px;
 
 font-weight:600;
 
-transition:.35s;
+transition:.3s;
 
 }
 
 .button-secondary:hover{
 
-background:white;
+background:var(--navy);
 
-color:var(--navy);
+color:white;
 
 }
 
-
-/* =====================================================
+/*======================================================
 HERO
-===================================================== */
+======================================================*/
 
 .hero{
 
-position:relative;
+display:grid;
 
-height:100vh;
-
-overflow:hidden;
-
-display:flex;
+grid-template-columns:1.05fr .95fr;
 
 align-items:center;
 
-}
+gap:70px;
 
-.hero-background{
+padding-top:180px;
 
-position:absolute;
+padding-bottom:120px;
 
-inset:0;
-
-z-index:0;
-
-}
-
-.hero-background img{
-
-width:100%;
-
-height:100%;
-
-object-fit:cover;
-
-}
-
-.hero-overlay{
-
-position:absolute;
-
-inset:0;
-
-background:
-linear-gradient(
-90deg,
-rgba(16,40,71,.88) 0%,
-rgba(16,40,71,.55) 45%,
-rgba(16,40,71,.20) 100%
-);
-
-z-index:1;
-
-}
-
-.hero .container{
-
-position:relative;
-
-z-index:2;
+background:white;
 
 }
 
 .hero-content{
 
-max-width:700px;
+padding-left:5%;
 
-padding-top:70px;
-
-}
-
-.hero-content h1{
-
-color:white;
-
-margin:25px 0;
+max-width:650px;
 
 }
 
-.hero-content h1 span{
+.hero-badge{
+
+display:inline-block;
+
+padding:10px 18px;
+
+background:#F2ECE5;
+
+border-radius:999px;
+
+color:var(--copper);
+
+font-size:12px;
+
+font-weight:700;
+
+letter-spacing:2px;
+
+margin-bottom:30px;
+
+}
+
+.hero h1{
+
+margin-bottom:30px;
+
+}
+
+.hero h1 span{
 
 display:block;
 
@@ -439,15 +412,13 @@ color:var(--copper);
 
 }
 
-.hero-description{
+.hero p{
 
-color:rgba(255,255,255,.92);
+font-size:21px;
 
-font-size:22px;
+margin-bottom:40px;
 
-max-width:620px;
-
-margin-bottom:45px;
+max-width:560px;
 
 }
 
@@ -455,15 +426,190 @@ margin-bottom:45px;
 
 display:flex;
 
-gap:22px;
+gap:18px;
 
 flex-wrap:wrap;
 
 }
 
-.hero-stats{
+.hero-image{
 
 display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+padding-right:5%;
+
+}
+
+.hero-image img{
+
+width:100%;
+
+max-width:650px;
+
+border-radius:24px;
+
+box-shadow:var(--shadow);
+
+}
+/*======================================================
+HOW IT WORKS
+======================================================*/
+
+.how-it-works{
+
+background:var(--light);
+
+}
+
+.steps{
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:35px;
+
+margin-top:60px;
+
+}
+
+.step-card{
+
+background:white;
+
+padding:45px;
+
+border-radius:var(--radius);
+
+box-shadow:var(--shadow);
+
+transition:var(--transition);
+
+}
+
+.step-card:hover{
+
+transform:translateY(-8px);
+
+}
+
+.step-number{
+
+width:60px;
+
+height:60px;
+
+border-radius:50%;
+
+background:var(--navy);
+
+color:white;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+font-size:22px;
+
+font-weight:700;
+
+margin-bottom:25px;
+
+}
+
+.step-card h3{
+
+margin-bottom:15px;
+
+}
+
+/*======================================================
+WHY WAYPOINT
+======================================================*/
+
+#services{
+
+background:white;
+
+}
+
+.benefits-grid{
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:30px;
+
+margin-top:60px;
+
+}
+
+.benefit-card{
+
+background:var(--light);
+
+padding:40px;
+
+border-radius:var(--radius);
+
+box-shadow:var(--shadow);
+
+transition:var(--transition);
+
+}
+
+.benefit-card:hover{
+
+transform:translateY(-8px);
+
+}
+
+.benefit-icon{
+
+width:60px;
+
+height:60px;
+
+margin-bottom:25px;
+
+}
+
+.benefit-card h3{
+
+margin-bottom:15px;
+
+font-size:30px;
+
+}
+
+.benefit-card p{
+
+margin-bottom:0;
+
+}
+
+/*======================================================
+WHAT'S INCLUDED
+======================================================*/
+
+.included-section{
+
+background:#ffffff;
+
+}
+
+.included-grid{
+
+display:grid;
+
+grid-template-columns:repeat(2,1fr);
 
 gap:50px;
 
@@ -471,22 +617,864 @@ margin-top:70px;
 
 }
 
-.hero-stats h3{
+.included-column{
+
+display:flex;
+
+flex-direction:column;
+
+gap:28px;
+
+}
+
+.included-item{
+
+background:var(--light);
+
+padding:35px;
+
+border-radius:18px;
+
+box-shadow:var(--shadow);
+
+transition:var(--transition);
+
+border-left:5px solid var(--copper);
+
+}
+
+.included-item:hover{
+
+transform:translateY(-6px);
+
+}
+
+.included-item h3{
+
+font-size:28px;
+
+margin-bottom:12px;
+
+}
+
+.included-item p{
+
+margin:0;
+
+}
+
+/*======================================================
+GENERAL CARD SPACING
+======================================================*/
+
+.card-spacing{
+
+margin-top:70px;
+
+}
+
+/*======================================================
+SECTION DIVIDERS
+======================================================*/
+
+section:nth-child(even){
+
+position:relative;
+
+}
+
+section:nth-child(even)::after{
+
+content:"";
+
+display:block;
+
+width:120px;
+
+height:3px;
+
+background:var(--copper);
+
+margin:80px auto 0;
+
+opacity:.15;
+
+}
+
+/*======================================================
+IMAGE DEFAULTS
+======================================================*/
+
+.benefit-card img,
+
+.step-card img,
+
+.included-item img{
+
+display:block;
+
+max-width:100%;
+
+}
+
+/*======================================================
+SMALL DESKTOP
+======================================================*/
+
+@media (max-width:1100px){
+
+.steps{
+
+grid-template-columns:1fr;
+
+}
+
+.benefits-grid{
+
+grid-template-columns:1fr 1fr;
+
+}
+
+.included-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+/*======================================================
+ANNUAL HOME PLAN
+======================================================*/
+
+.annual-plan{
+
+background:var(--light);
+
+}
+
+.season-grid{
+
+display:grid;
+
+grid-template-columns:repeat(4,1fr);
+
+gap:30px;
+
+margin-top:70px;
+
+}
+
+.season-card{
+
+background:white;
+
+padding:40px;
+
+border-radius:20px;
+
+box-shadow:var(--shadow);
+
+transition:var(--transition);
+
+height:100%;
+
+}
+
+.season-card:hover{
+
+transform:translateY(-8px);
+
+}
+
+.season-title{
+
+display:inline-block;
+
+padding:8px 16px;
+
+border-radius:999px;
+
+background:var(--navy);
 
 color:white;
 
-font-size:42px;
+font-size:12px;
 
-margin-bottom:5px;
+font-weight:700;
+
+letter-spacing:2px;
+
+margin-bottom:25px;
 
 }
 
-.hero-stats span{
+.season-card h3{
 
-color:rgba(255,255,255,.75);
+margin-bottom:20px;
 
-font-size:15px;
+font-size:30px;
+
+}
+
+.season-card ul{
+
+padding-left:18px;
+
+list-style:disc;
+
+}
+
+.season-card li{
+
+margin-bottom:12px;
+
+color:var(--gray);
+
+}
+
+/*======================================================
+MEMBERSHIPS
+======================================================*/
+
+.membership-section{
+
+background:white;
+
+}
+
+.membership-grid{
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:35px;
+
+margin-top:70px;
+
+}
+
+.membership-card{
+
+position:relative;
+
+background:var(--light);
+
+padding:45px;
+
+border-radius:22px;
+
+box-shadow:var(--shadow);
+
+transition:var(--transition);
+
+display:flex;
+
+flex-direction:column;
+
+}
+
+.membership-card:hover{
+
+transform:translateY(-10px);
+
+}
+
+.membership-card.featured{
+
+background:var(--navy);
+
+color:white;
+
+transform:scale(1.03);
+
+}
+
+.membership-card.featured h3,
+
+.membership-card.featured p,
+
+.membership-card.featured li{
+
+color:white;
+
+}
+
+.plan-label{
+
+display:inline-block;
+
+padding:8px 16px;
+
+border-radius:999px;
+
+background:var(--copper);
+
+color:white;
+
+font-size:12px;
+
+font-weight:700;
 
 letter-spacing:1px;
 
+margin-bottom:25px;
+
 }
+
+.plan-size{
+
+margin:10px 0 25px;
+
+}
+
+.membership-card ul{
+
+margin-bottom:35px;
+
+padding-left:18px;
+
+list-style:disc;
+
+}
+
+.membership-card li{
+
+margin-bottom:12px;
+
+}
+
+/*======================================================
+ASSESSMENT
+======================================================*/
+
+.assessment{
+
+background:var(--light);
+
+}
+
+.assessment-grid{
+
+display:grid;
+
+grid-template-columns:repeat(2,1fr);
+
+gap:30px;
+
+margin:70px 0;
+
+}
+
+.assessment-item{
+
+background:white;
+
+padding:35px;
+
+border-radius:20px;
+
+box-shadow:var(--shadow);
+
+}
+
+.assessment-item h3{
+
+margin-bottom:15px;
+
+}
+
+.assessment-buttons{
+
+display:flex;
+
+justify-content:center;
+
+gap:20px;
+
+flex-wrap:wrap;
+
+margin-top:20px;
+
+}
+
+/*======================================================
+FAQ
+======================================================*/
+
+.faq{
+
+background:white;
+
+}
+
+.faq-list{
+
+max-width:900px;
+
+margin:60px auto 0;
+
+display:flex;
+
+flex-direction:column;
+
+gap:25px;
+
+}
+
+.faq-item{
+
+background:var(--light);
+
+padding:35px;
+
+border-radius:18px;
+
+box-shadow:var(--shadow);
+
+}
+
+.faq-item h3{
+
+margin-bottom:12px;
+
+}
+
+/*======================================================
+FOOTER
+======================================================*/
+
+footer{
+
+background:var(--navy);
+
+padding:90px 0 30px;
+
+color:white;
+
+}
+
+.footer-grid{
+
+display:grid;
+
+grid-template-columns:2fr 1fr 1fr 1fr;
+
+gap:40px;
+
+}
+
+.footer-logo{
+
+width:220px;
+
+margin-bottom:25px;
+
+}
+
+footer h4{
+
+font-size:20px;
+
+margin-bottom:18px;
+
+font-family:'Inter',sans-serif;
+
+color:white;
+
+}
+
+footer p{
+
+color:rgba(255,255,255,.75);
+
+margin-bottom:10px;
+
+}
+
+.copyright{
+
+margin-top:60px;
+
+padding-top:30px;
+
+border-top:1px solid rgba(255,255,255,.15);
+
+text-align:center;
+
+color:rgba(255,255,255,.65);
+
+font-size:14px;
+
+}
+/*======================================================
+TABLET
+======================================================*/
+
+@media (max-width:1100px){
+
+header .container{
+
+flex-wrap:wrap;
+justify-content:center;
+gap:20px;
+
+}
+
+.logo{
+
+width:100%;
+display:flex;
+justify-content:center;
+
+}
+
+.logo img{
+
+width:190px;
+
+}
+
+nav ul{
+
+gap:25px;
+flex-wrap:wrap;
+justify-content:center;
+
+}
+
+.hero{
+
+grid-template-columns:1fr;
+text-align:center;
+padding-top:170px;
+
+}
+
+.hero-content{
+
+padding:0;
+margin:auto;
+
+}
+
+.hero p{
+
+margin-left:auto;
+margin-right:auto;
+
+}
+
+.hero-buttons{
+
+justify-content:center;
+
+}
+
+.hero-image{
+
+padding:0;
+margin-top:60px;
+
+}
+
+.steps{
+
+grid-template-columns:1fr;
+
+}
+
+.benefits-grid{
+
+grid-template-columns:1fr 1fr;
+
+}
+
+.included-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.season-grid{
+
+grid-template-columns:1fr 1fr;
+
+}
+
+.membership-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.membership-card.featured{
+
+transform:none;
+
+}
+
+.assessment-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.footer-grid{
+
+grid-template-columns:1fr 1fr;
+
+gap:50px;
+
+}
+
+}
+
+
+/*======================================================
+MOBILE
+======================================================*/
+
+@media (max-width:768px){
+
+section{
+
+padding:80px 0;
+
+}
+
+.container{
+
+width:92%;
+
+}
+
+header{
+
+padding:15px 0;
+
+}
+
+.logo img{
+
+width:165px;
+
+}
+
+nav{
+
+display:none;
+
+}
+
+.button-primary{
+
+padding:15px 22px;
+font-size:15px;
+
+}
+
+.button-secondary{
+
+padding:15px 22px;
+font-size:15px;
+
+}
+
+.hero{
+
+padding-top:140px;
+padding-bottom:80px;
+
+}
+
+.hero-content{
+
+text-align:center;
+
+}
+
+.hero h1{
+
+font-size:48px;
+
+}
+
+.hero p{
+
+font-size:18px;
+
+}
+
+.hero-buttons{
+
+flex-direction:column;
+align-items:center;
+
+}
+
+.hero-buttons a{
+
+width:100%;
+max-width:320px;
+
+}
+
+.hero-image{
+
+margin-top:40px;
+
+}
+
+h2{
+
+font-size:38px;
+
+}
+
+h3{
+
+font-size:24px;
+
+}
+
+.benefits-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.season-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.footer-grid{
+
+grid-template-columns:1fr;
+text-align:center;
+
+}
+
+.footer-logo{
+
+margin:auto auto 25px;
+
+}
+
+.assessment-buttons{
+
+flex-direction:column;
+
+}
+
+.assessment-buttons a{
+
+width:100%;
+
+}
+
+}
+
+
+/*======================================================
+SMALL PHONES
+======================================================*/
+
+@media (max-width:480px){
+
+.hero h1{
+
+font-size:40px;
+
+}
+
+.hero p{
+
+font-size:17px;
+
+}
+
+.logo img{
+
+width:150px;
+
+}
+
+.button-primary,
+
+.button-secondary{
+
+width:100%;
+
+}
+
+}
+
+
+/*======================================================
+ANIMATIONS
+======================================================*/
+
+.button-primary,
+.button-secondary,
+.membership-card,
+.benefit-card,
+.step-card,
+.season-card,
+.included-item,
+.assessment-item,
+.faq-item{
+
+transition:all .35s ease;
+
+}
+
+.button-primary:hover{
+
+transform:translateY(-3px);
+
+}
+
+.button-secondary:hover{
+
+transform:translateY(-3px);
+
+}
+
+.membership-card:hover,
+.benefit-card:hover,
+.step-card:hover,
+.season-card:hover,
+.included-item:hover,
+.assessment-item:hover,
+.faq-item:hover{
+
+transform:translateY(-6px);
+
+}
+
+
+/*======================================================
+SCROLL OFFSET
+======================================================*/
+
+html{
+
+scroll-padding-top:120px;
+
+}
+
+
+/*======================================================
+SELECTION
+======================================================*/
+
+::selection{
+
+background:var(--copper);
+color:white;
+
+}
+
