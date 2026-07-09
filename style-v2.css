@@ -192,25 +192,25 @@ height:88px;
 
 }
 
+/* ===========================
+   LOGO
+=========================== */
+
 .logo{
-
-display:flex;
-
-align-items:center;
-
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
 }
 
 .logo img{
-
-height:95px;
-
-transition:.35s;
-
+    width: 320px;      /* Increase or decrease as needed */
+    height: auto;
+    display: block;
+    transition: all .35s ease;
 }
 
 .logo img:hover{
-
-transform:scale(1.03);
+    transform: scale(1.03);
 
 }
 nav ul{
