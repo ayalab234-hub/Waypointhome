@@ -1,36 +1,27 @@
-/*======================================================
+/*=====================================================
 WAYPOINT HOME
-Premium Landing Page
-======================================================*/
+=====================================================*/
 
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
 
-/*======================================================
-ROOT
-======================================================*/
-
 :root{
 
---navy:#102847;
---copper:#B78550;
+--navy:#0F2747;
+--copper:#B7864C;
+--cream:#F5F1EA;
+--cream2:#ECE5DB;
+--text:#2E3742;
+--gray:#6E7681;
 --white:#ffffff;
---light:#F8F6F3;
---gray:#667085;
---dark:#1D2939;
 
---shadow:0 20px 60px rgba(0,0,0,.08);
+--radius:22px;
 
---radius:18px;
-
---transition:.35s ease;
-
---container:1320px;
+--shadow:
+0 18px 45px rgba(0,0,0,.08);
 
 }
 
-/*======================================================
-RESET
-======================================================*/
+/*=====================================================*/
 
 *{
 
@@ -49,9 +40,13 @@ scroll-behavior:smooth;
 body{
 
 font-family:'Inter',sans-serif;
-background:var(--light);
-color:var(--dark);
+
+background:var(--cream);
+
+color:var(--text);
+
 line-height:1.7;
+
 overflow-x:hidden;
 
 }
@@ -59,6 +54,7 @@ overflow-x:hidden;
 img{
 
 display:block;
+
 max-width:100%;
 
 }
@@ -66,6 +62,7 @@ max-width:100%;
 a{
 
 text-decoration:none;
+
 color:inherit;
 
 }
@@ -78,34 +75,38 @@ list-style:none;
 
 .container{
 
-max-width:1200px;
-width:92%;
-margin:0 auto;
+width:min(92%,1280px);
+
+margin:auto;
 
 }
 
-/*======================================================
+/*=====================================================
 TYPOGRAPHY
-======================================================*/
+=====================================================*/
 
 h1,h2,h3{
 
 font-family:'Cormorant Garamond',serif;
+
 font-weight:600;
+
 color:var(--navy);
 
 }
 
 h1{
 
-font-size:74px;
+font-size:78px;
+
 line-height:.95;
 
 }
 
 h2{
 
-font-size:54px;
+font-size:56px;
+
 margin-bottom:20px;
 
 }
@@ -119,6 +120,7 @@ font-size:30px;
 p{
 
 font-size:18px;
+
 color:var(--gray);
 
 }
@@ -131,17 +133,11 @@ padding:110px 0;
 
 .section-header{
 
-max-width:760px;
-margin:auto;
 text-align:center;
-margin-bottom:70px;
 
-}
+max-width:760px;
 
-.section-subtitle{
-
-font-size:20px;
-margin-top:10px;
+margin:0 auto 70px;
 
 }
 
@@ -149,23 +145,23 @@ margin-top:10px;
 
 display:inline-block;
 
-font-size:13px;
+letter-spacing:3px;
+
+font-size:12px;
 
 font-weight:700;
 
-letter-spacing:3px;
+color:var(--copper);
+
+margin-bottom:18px;
 
 text-transform:uppercase;
 
-color:var(--copper);
-
-margin-bottom:20px;
-
 }
 
-/* ==========================================
+/*=====================================================
 HEADER
-========================================== */
+=====================================================*/
 
 header{
 
@@ -179,20 +175,17 @@ width:100%;
 
 z-index:1000;
 
-background:#F7F3EE;
+background:rgba(245,241,234,.96);
 
-border-bottom:1px solid rgba(16,40,71,.08);
+backdrop-filter:blur(10px);
+
+border-bottom:1px solid rgba(15,39,71,.08);
 
 padding:18px 0;
 
-box-shadow:0 4px 20px rgba(0,0,0,.05);
-
 }
+
 header .container{
-
-max-width:1320px;
-
-margin:auto;
 
 display:flex;
 
@@ -200,12 +193,13 @@ align-items:center;
 
 justify-content:space-between;
 
-padding:0 35px;
+gap:50px;
 
 }
-/* ==========================================
+
+/*=====================================================
 LOGO
-========================================== */
+=====================================================*/
 
 .logo{
 
@@ -219,52 +213,54 @@ flex-shrink:0;
 
 .logo img{
 
-display:block;
-
-width:300px;
+width:215px;
 
 height:auto;
 
-object-fit:contain;
+display:block;
 
 }
-/*======================================================
+
+/*=====================================================
 NAVIGATION
-======================================================*/
+=====================================================*/
+
+nav{
+
+margin-left:auto;
+
+}
 
 nav ul{
 
 display:flex;
 
+gap:38px;
+
 align-items:center;
-
-gap:42px;
-
-margin:0;
-
-padding:0;
-
-list-style:none;
 
 }
 
 nav a{
 
-font-size:16px;
+font-size:15px;
 
 font-weight:600;
 
-color:#102847;
+color:var(--navy);
 
 transition:.3s;
+
+position:relative;
 
 }
 
 nav a:hover{
 
-color:#B78550;
+color:var(--copper);
 
 }
+
 nav a::after{
 
 content:"";
@@ -291,11 +287,12 @@ width:100%;
 
 }
 
-/*======================================================
+/*=====================================================
 BUTTONS
-======================================================*/
+=====================================================*/
 
-.button-primary{
+.button-primary,
+.nav-button{
 
 display:inline-flex;
 
@@ -303,23 +300,24 @@ align-items:center;
 
 justify-content:center;
 
-padding:16px 34px;
+padding:16px 30px;
 
-background:#102847;
+background:var(--navy);
 
-color:#ffffff;
+color:white;
 
 border-radius:999px;
 
 font-weight:600;
 
-transition:.3s;
+transition:.35s;
 
 }
 
-.button-primary:hover{
+.button-primary:hover,
+.nav-button:hover{
 
-background:#0d203a;
+background:var(--copper);
 
 }
 
@@ -341,7 +339,7 @@ border-radius:999px;
 
 font-weight:600;
 
-transition:.3s;
+transition:.35s;
 
 }
 
@@ -353,63 +351,85 @@ color:white;
 
 }
 
-/*======================================================
+/*=====================================================
 HERO
-======================================================*/
+=====================================================*/
 
 .hero{
 
-display:grid;
+position:relative;
 
-grid-template-columns:1fr 1fr;
+height:100vh;
+
+display:flex;
 
 align-items:center;
 
-gap:70px;
+justify-content:center;
 
-padding-top:135px;
+overflow:hidden;
 
-padding-bottom:90px;
+padding:0;
 
-background:#fbf9f6;
+}
+
+.hero-image{
+
+position:absolute;
+
+inset:0;
+
+z-index:0;
+
+}
+
+.hero-image img{
+
+width:100%;
+
+height:100%;
+
+object-fit:cover;
+
+}
+
+.hero-overlay{
+
+position:absolute;
+
+inset:0;
+
+background:
+linear-gradient(
+90deg,
+rgba(15,39,71,.82) 0%,
+rgba(15,39,71,.55) 45%,
+rgba(15,39,71,.20) 100%
+);
+
+z-index:1;
 
 }
 
 .hero-content{
 
-max-width:620px;
+position:relative;
 
-padding-left:40px;
+z-index:2;
 
-}
+max-width:700px;
 
-}
+margin-left:0;
 
-.hero-badge{
-
-display:inline-block;
-
-padding:10px 18px;
-
-background:#F2ECE5;
-
-border-radius:999px;
-
-color:var(--copper);
-
-font-size:12px;
-
-font-weight:700;
-
-letter-spacing:2px;
-
-margin-bottom:30px;
+padding-top:100px;
 
 }
 
 .hero h1{
 
-margin-bottom:30px;
+color:white;
+
+margin:20px 0;
 
 }
 
@@ -423,11 +443,13 @@ color:var(--copper);
 
 .hero p{
 
-font-size:21px;
+font-size:22px;
+
+color:rgba(255,255,255,.92);
 
 margin-bottom:40px;
 
-max-width:560px;
+max-width:620px;
 
 }
 
@@ -435,45 +457,38 @@ max-width:560px;
 
 display:flex;
 
-gap:18px;
+gap:20px;
 
 flex-wrap:wrap;
 
 }
 
-.hero-image{
+.hero .button-secondary{
 
-display:flex;
+border-color:white;
 
-justify-content:flex-end;
-
-padding-right:40px;
+color:white;
 
 }
 
-.hero-image img{
+.hero .button-secondary:hover{
 
-width:100%;
+background:white;
 
-max-width:650px;
+color:var(--navy);
 
-border-radius:28px;
+}
+/*=====================================================
+SERVICES
+=====================================================*/
 
-box-shadow:0 25px 60px rgba(0,0,0,.12);
+.services{
+
+background:var(--cream);
 
 }
 
-/*======================================================
-HOW IT WORKS
-======================================================*/
-
-.how-it-works{
-
-background:var(--light);
-
-}
-
-.steps{
+.services-grid{
 
 display:grid;
 
@@ -485,37 +500,35 @@ margin-top:60px;
 
 }
 
-.step-card{
+.service-card{
 
-background:white;
+background:#FAF8F4;
 
 padding:45px;
 
 border-radius:var(--radius);
 
+border:1px solid rgba(15,39,71,.08);
+
 box-shadow:var(--shadow);
 
-transition:var(--transition);
+transition:.35s;
 
 }
 
-.step-card:hover{
+.service-card:hover{
 
 transform:translateY(-8px);
 
+box-shadow:0 28px 60px rgba(15,39,71,.12);
+
 }
 
-.step-number{
+.service-number{
 
-width:60px;
+width:54px;
 
-height:60px;
-
-border-radius:50%;
-
-background:var(--navy);
-
-color:white;
+height:54px;
 
 display:flex;
 
@@ -523,330 +536,51 @@ align-items:center;
 
 justify-content:center;
 
-font-size:22px;
-
-font-weight:700;
-
-margin-bottom:25px;
-
-}
-
-.step-card h3{
-
-margin-bottom:15px;
-
-}
-
-/*======================================================
-WHY WAYPOINT
-======================================================*/
-
-#services{
-
-background:white;
-
-}
-
-.benefits-grid{
-
-display:grid;
-
-grid-template-columns:repeat(3,1fr);
-
-gap:30px;
-
-margin-top:60px;
-
-}
-
-.benefit-card{
-
-background:var(--light);
-
-padding:40px;
-
-border-radius:var(--radius);
-
-box-shadow:var(--shadow);
-
-transition:var(--transition);
-
-}
-
-.benefit-card:hover{
-
-transform:translateY(-8px);
-
-}
-
-.benefit-icon{
-
-width:60px;
-
-height:60px;
-
-margin-bottom:25px;
-
-}
-
-.benefit-card h3{
-
-margin-bottom:15px;
-
-font-size:30px;
-
-}
-
-.benefit-card p{
-
-margin-bottom:0;
-
-}
-
-/*======================================================
-WHAT'S INCLUDED
-======================================================*/
-
-.included-section{
-
-background:#ffffff;
-
-}
-
-.included-grid{
-
-display:grid;
-
-grid-template-columns:repeat(2,1fr);
-
-gap:50px;
-
-margin-top:70px;
-
-}
-
-.included-column{
-
-display:flex;
-
-flex-direction:column;
-
-gap:28px;
-
-}
-
-.included-item{
-
-background:var(--light);
-
-padding:35px;
-
-border-radius:18px;
-
-box-shadow:var(--shadow);
-
-transition:var(--transition);
-
-border-left:5px solid var(--copper);
-
-}
-
-.included-item:hover{
-
-transform:translateY(-6px);
-
-}
-
-.included-item h3{
-
-font-size:28px;
-
-margin-bottom:12px;
-
-}
-
-.included-item p{
-
-margin:0;
-
-}
-
-/*======================================================
-GENERAL CARD SPACING
-======================================================*/
-
-.card-spacing{
-
-margin-top:70px;
-
-}
-
-/*======================================================
-SECTION DIVIDERS
-======================================================*/
-
-section:nth-child(even){
-
-position:relative;
-
-}
-
-section:nth-child(even)::after{
-
-content:"";
-
-display:block;
-
-width:120px;
-
-height:3px;
-
-background:var(--copper);
-
-margin:80px auto 0;
-
-opacity:.15;
-
-}
-
-/*======================================================
-IMAGE DEFAULTS
-======================================================*/
-
-.benefit-card img,
-
-.step-card img,
-
-.included-item img{
-
-display:block;
-
-max-width:100%;
-
-}
-
-/*======================================================
-SMALL DESKTOP
-======================================================*/
-
-@media (max-width:1100px){
-
-.steps{
-
-grid-template-columns:1fr;
-
-}
-
-.benefits-grid{
-
-grid-template-columns:1fr 1fr;
-
-}
-
-.included-grid{
-
-grid-template-columns:1fr;
-
-}
-
-}
-/*======================================================
-ANNUAL HOME PLAN
-======================================================*/
-
-.annual-plan{
-
-background:var(--light);
-
-}
-
-.season-grid{
-
-display:grid;
-
-grid-template-columns:repeat(4,1fr);
-
-gap:30px;
-
-margin-top:70px;
-
-}
-
-.season-card{
-
-background:white;
-
-padding:40px;
-
-border-radius:20px;
-
-box-shadow:var(--shadow);
-
-transition:var(--transition);
-
-height:100%;
-
-}
-
-.season-card:hover{
-
-transform:translateY(-8px);
-
-}
-
-.season-title{
-
-display:inline-block;
-
-padding:8px 16px;
-
-border-radius:999px;
+border-radius:50%;
 
 background:var(--navy);
 
 color:white;
 
-font-size:12px;
-
 font-weight:700;
-
-letter-spacing:2px;
 
 margin-bottom:25px;
 
 }
 
-.season-card h3{
+.service-card h3{
 
-margin-bottom:20px;
-
-font-size:30px;
+margin-bottom:15px;
 
 }
 
-.season-card ul{
+/*=====================================================
+MEMBERSHIP
+=====================================================*/
 
-padding-left:18px;
+.membership{
 
-list-style:disc;
+background:var(--navy);
 
-}
-
-.season-card li{
-
-margin-bottom:12px;
-
-color:var(--gray);
+color:white;
 
 }
 
-/*======================================================
-MEMBERSHIPS
-======================================================*/
+.membership .section-header h2,
 
-.membership-section{
+.membership .section-header p,
 
-background:white;
+.membership .eyebrow{
+
+color:white;
+
+}
+
+.membership .eyebrow{
+
+opacity:.75;
+
+letter-spacing:3px;
 
 }
 
@@ -864,135 +598,133 @@ margin-top:70px;
 
 .membership-card{
 
-position:relative;
+background:rgba(255,255,255,.08);
 
-background:var(--light);
+border:1px solid rgba(255,255,255,.10);
+
+backdrop-filter:blur(10px);
 
 padding:45px;
 
 border-radius:22px;
 
-box-shadow:var(--shadow);
-
-transition:var(--transition);
-
-display:flex;
-
-flex-direction:column;
+transition:.35s;
 
 }
 
 .membership-card:hover{
 
-transform:translateY(-10px);
+background:rgba(255,255,255,.14);
+
+transform:translateY(-8px);
 
 }
 
-.membership-card.featured{
-
-background:var(--navy);
+.membership-card h3{
 
 color:white;
 
-transform:scale(1.03);
+margin-bottom:18px;
 
 }
 
-.membership-card.featured h3,
+.membership-card p{
 
-.membership-card.featured p,
-
-.membership-card.featured li{
-
-color:white;
+color:rgba(255,255,255,.82);
 
 }
 
-.plan-label{
-
-display:inline-block;
-
-padding:8px 16px;
-
-border-radius:999px;
-
-background:var(--copper);
-
-color:white;
-
-font-size:12px;
-
-font-weight:700;
-
-letter-spacing:1px;
-
-margin-bottom:25px;
-
-}
-
-.plan-size{
-
-margin:10px 0 25px;
-
-}
-
-.membership-card ul{
-
-margin-bottom:35px;
-
-padding-left:18px;
-
-list-style:disc;
-
-}
-
-.membership-card li{
-
-margin-bottom:12px;
-
-}
-
-/*======================================================
+/*=====================================================
 ASSESSMENT
-======================================================*/
+=====================================================*/
 
 .assessment{
 
-background:var(--light);
+background:var(--cream2);
 
 }
 
-.assessment-grid{
+.assessment-wrapper{
 
 display:grid;
 
-grid-template-columns:repeat(2,1fr);
+grid-template-columns:1.1fr .9fr;
 
-gap:30px;
+gap:70px;
 
-margin:70px 0;
+align-items:center;
 
 }
 
-.assessment-item{
+.assessment-photo img{
 
-background:white;
+width:100%;
 
-padding:35px;
-
-border-radius:20px;
+border-radius:24px;
 
 box-shadow:var(--shadow);
 
 }
 
-.assessment-item h3{
+.assessment-list{
 
-margin-bottom:15px;
+margin:35px 0;
 
 }
 
-.assessment-buttons{
+.assessment-list li{
+
+margin-bottom:18px;
+
+font-size:17px;
+
+color:var(--text);
+
+}
+
+/*=====================================================
+CONTACT
+=====================================================*/
+
+.contact{
+
+background:var(--cream);
+
+}
+
+.contact-box{
+
+background:var(--navy);
+
+padding:80px;
+
+border-radius:30px;
+
+text-align:center;
+
+box-shadow:0 30px 70px rgba(15,39,71,.18);
+
+}
+
+.contact-box h2{
+
+color:white;
+
+margin-bottom:20px;
+
+}
+
+.contact-box p{
+
+color:rgba(255,255,255,.80);
+
+max-width:700px;
+
+margin:0 auto 35px;
+
+}
+
+.contact-buttons{
 
 display:flex;
 
@@ -1002,209 +734,128 @@ gap:20px;
 
 flex-wrap:wrap;
 
-margin-top:20px;
+}
+
+.contact .button-primary{
+
+background:var(--copper);
 
 }
 
-/*======================================================
-FAQ
-======================================================*/
+.contact .button-primary:hover{
 
-.faq{
+background:#9d6f3f;
+
+}
+
+.contact .button-secondary{
+
+border-color:white;
+
+color:white;
+
+}
+
+.contact .button-secondary:hover{
 
 background:white;
 
+color:var(--navy);
+
 }
 
-.faq-list{
+/*=====================================================
+FOOTER
+=====================================================*/
 
-max-width:900px;
+footer{
 
-margin:60px auto 0;
+background:#0B1E37;
+
+padding:70px 0 35px;
+
+text-align:center;
+
+}
+
+.footer-container{
 
 display:flex;
 
 flex-direction:column;
 
-gap:25px;
+align-items:center;
 
-}
-
-.faq-item{
-
-background:var(--light);
-
-padding:35px;
-
-border-radius:18px;
-
-box-shadow:var(--shadow);
-
-}
-
-.faq-item h3{
-
-margin-bottom:12px;
-
-}
-
-/*======================================================
-FOOTER
-======================================================*/
-
-footer{
-
-background:var(--navy);
-
-padding:90px 0 30px;
-
-color:white;
-
-}
-
-.footer-grid{
-
-display:grid;
-
-grid-template-columns:2fr 1fr 1fr 1fr;
-
-gap:40px;
+gap:18px;
 
 }
 
 .footer-logo{
 
-width:220px;
+width:190px;
 
-margin-bottom:25px;
-
-}
-
-footer h4{
-
-font-size:20px;
-
-margin-bottom:18px;
-
-font-family:'Inter',sans-serif;
-
-color:white;
+height:auto;
 
 }
 
 footer p{
 
-color:rgba(255,255,255,.75);
+color:rgba(255,255,255,.70);
 
-margin-bottom:10px;
-
-}
-
-.copyright{
-
-margin-top:60px;
-
-padding-top:30px;
-
-border-top:1px solid rgba(255,255,255,.15);
-
-text-align:center;
-
-color:rgba(255,255,255,.65);
-
-font-size:14px;
+font-size:15px;
 
 }
-/*======================================================
-TABLET
-======================================================*/
+/*=====================================================
+TABLETS
+=====================================================*/
 
 @media (max-width:1100px){
 
-header .container{
+.container{
 
-flex-wrap:wrap;
-justify-content:center;
-gap:20px;
+width:94%;
 
 }
 
-.logo{
+header .container{
 
-width:100%;
-display:flex;
-justify-content:center;
+gap:25px;
 
 }
 
 .logo img{
 
-width:190px;
+width:180px;
 
 }
 
 nav ul{
 
-gap:25px;
-flex-wrap:wrap;
-justify-content:center;
+gap:22px;
 
 }
 
 .hero{
 
-grid-template-columns:1fr;
-text-align:center;
-padding-top:170px;
+min-height:900px;
 
 }
 
 .hero-content{
 
-padding:0;
-margin:auto;
+max-width:650px;
+
+padding-top:140px;
 
 }
 
-.hero p{
+.hero h1{
 
-margin-left:auto;
-margin-right:auto;
-
-}
-
-.hero-buttons{
-
-justify-content:center;
+font-size:62px;
 
 }
 
-.hero-image{
-
-padding:0;
-margin-top:60px;
-
-}
-
-.steps{
-
-grid-template-columns:1fr;
-
-}
-
-.benefits-grid{
-
-grid-template-columns:1fr 1fr;
-
-}
-
-.included-grid{
-
-grid-template-columns:1fr;
-
-}
-
-.season-grid{
+.services-grid{
 
 grid-template-columns:1fr 1fr;
 
@@ -1216,32 +867,29 @@ grid-template-columns:1fr;
 
 }
 
-.membership-card.featured{
-
-transform:none;
-
-}
-
-.assessment-grid{
+.assessment-wrapper{
 
 grid-template-columns:1fr;
 
 }
 
-.footer-grid{
+.assessment-photo{
 
-grid-template-columns:1fr 1fr;
+order:-1;
 
-gap:50px;
+}
+
+.contact-box{
+
+padding:60px 40px;
 
 }
 
 }
 
-
-/*======================================================
+/*=====================================================
 MOBILE
-======================================================*/
+=====================================================*/
 
 @media (max-width:768px){
 
@@ -1251,15 +899,17 @@ padding:80px 0;
 
 }
 
-.container{
+header{
 
-width:92%;
+padding:14px 0;
 
 }
 
-header{
+header .container{
 
-padding:15px 0;
+flex-direction:column;
+
+gap:18px;
 
 }
 
@@ -1269,42 +919,35 @@ width:165px;
 
 }
 
-nav{
+nav ul{
 
-display:none;
+flex-wrap:wrap;
 
-}
+justify-content:center;
 
-.button-primary{
-
-padding:15px 22px;
-font-size:15px;
-
-}
-
-.button-secondary{
-
-padding:15px 22px;
-font-size:15px;
+gap:18px;
 
 }
 
 .hero{
 
-padding-top:140px;
-padding-bottom:80px;
+min-height:800px;
 
 }
 
 .hero-content{
 
+padding-top:120px;
+
 text-align:center;
+
+margin:auto;
 
 }
 
 .hero h1{
 
-font-size:48px;
+font-size:46px;
 
 }
 
@@ -1312,11 +955,18 @@ font-size:48px;
 
 font-size:18px;
 
+margin-left:auto;
+
+margin-right:auto;
+
 }
 
 .hero-buttons{
 
+justify-content:center;
+
 flex-direction:column;
+
 align-items:center;
 
 }
@@ -1324,83 +974,68 @@ align-items:center;
 .hero-buttons a{
 
 width:100%;
+
 max-width:320px;
 
 }
 
-.hero-image{
-
-margin-top:40px;
-
-}
-
-h2{
-
-font-size:38px;
-
-}
-
-h3{
-
-font-size:24px;
-
-}
-
-.benefits-grid{
+.services-grid{
 
 grid-template-columns:1fr;
 
 }
 
-.season-grid{
+.membership-grid{
 
 grid-template-columns:1fr;
 
 }
 
-.footer-grid{
+.contact-buttons{
 
-grid-template-columns:1fr;
-text-align:center;
+flex-direction:column;
+
+align-items:center;
+
+}
+
+.contact-buttons a{
+
+width:100%;
+
+max-width:320px;
+
+}
+
+.contact-box{
+
+padding:50px 30px;
 
 }
 
 .footer-logo{
 
-margin:auto auto 25px;
-
-}
-
-.assessment-buttons{
-
-flex-direction:column;
-
-}
-
-.assessment-buttons a{
-
-width:100%;
+width:170px;
 
 }
 
 }
 
-
-/*======================================================
+/*=====================================================
 SMALL PHONES
-======================================================*/
+=====================================================*/
 
 @media (max-width:480px){
 
 .hero h1{
 
-font-size:40px;
+font-size:38px;
 
 }
 
-.hero p{
+h2{
 
-font-size:17px;
+font-size:36px;
 
 }
 
@@ -1412,77 +1047,201 @@ width:150px;
 
 .button-primary,
 
-.button-secondary{
+.button-secondary,
+
+.nav-button{
 
 width:100%;
 
 }
 
 }
+/*=====================================================
+FINAL POLISH
+=====================================================*/
 
+/* Smooth transitions */
 
-/*======================================================
-ANIMATIONS
-======================================================*/
+*{
 
-.button-primary,
-.button-secondary,
-.membership-card,
-.benefit-card,
-.step-card,
-.season-card,
-.included-item,
-.assessment-item,
-.faq-item{
-
-transition:all .35s ease;
+transition:
+background-color .3s ease,
+color .3s ease,
+border-color .3s ease,
+box-shadow .3s ease,
+transform .3s ease;
 
 }
 
-.button-primary:hover{
+/* Better image rendering */
 
-transform:translateY(-3px);
+img{
+
+image-rendering:auto;
+
+}
+
+/* Softer card shadows */
+
+.service-card,
+.membership-card,
+.contact-box{
+
+box-shadow:
+0 15px 40px rgba(15,39,71,.08);
+
+}
+
+.service-card:hover,
+.membership-card:hover{
+
+box-shadow:
+0 25px 60px rgba(15,39,71,.15);
+
+}
+
+/* Better spacing */
+
+section{
+
+position:relative;
+
+}
+
+section:not(.hero){
+
+padding-top:120px;
+
+padding-bottom:120px;
+
+}
+
+/* Hero spacing */
+
+.hero-content{
+
+padding-left:30px;
+
+padding-right:30px;
+
+}
+
+/* Hero buttons */
+
+.hero-buttons{
+
+margin-top:45px;
+
+}
+
+/* Rounded images */
+
+.hero-image img,
+
+.assessment-photo img{
+
+border-radius:28px;
+
+}
+
+/* Navigation */
+
+nav a{
+
+padding:6px 0;
+
+}
+
+nav a:hover{
+
+color:var(--copper);
+
+}
+
+/* Button polish */
+
+.button-primary,
+
+.nav-button{
+
+letter-spacing:.3px;
+
+font-size:15px;
+
+}
+
+.button-primary:hover,
+
+.nav-button:hover{
+
+transform:translateY(-2px);
 
 }
 
 .button-secondary:hover{
 
-transform:translateY(-3px);
+transform:translateY(-2px);
 
 }
 
-.membership-card:hover,
-.benefit-card:hover,
-.step-card:hover,
-.season-card:hover,
-.included-item:hover,
-.assessment-item:hover,
-.faq-item:hover{
+/* Membership cards */
 
-transform:translateY(-6px);
+.membership-card{
+
+overflow:hidden;
+
+position:relative;
 
 }
 
+.membership-card::before{
 
-/*======================================================
-SCROLL OFFSET
-======================================================*/
+content:"";
+
+position:absolute;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:4px;
+
+background:var(--copper);
+
+}
+
+/* Contact section */
+
+.contact-box{
+
+border:1px solid rgba(255,255,255,.08);
+
+}
+
+/* Footer */
+
+footer{
+
+border-top:4px solid var(--copper);
+
+}
+
+/* Scroll offset */
 
 html{
 
-scroll-padding-top:120px;
+scroll-padding-top:100px;
 
 }
 
-
-/*======================================================
-SELECTION
-======================================================*/
+/* Selection color */
 
 ::selection{
 
 background:var(--copper);
+
 color:white;
 
 }
-
