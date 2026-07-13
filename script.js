@@ -91,3 +91,38 @@ section.classList.add("hidden");
 observer.observe(section);
 
 });
+// ==========================
+// MODAL
+// ==========================
+
+const modal = document.getElementById("consultationModal");
+
+const openButtons = document.querySelectorAll(".openModal");
+
+const closeButton = document.querySelector(".close-modal");
+
+openButtons.forEach(button=>{
+
+button.addEventListener("click",()=>{
+
+modal.style.display="block";
+
+});
+
+});
+
+closeButton.addEventListener("click",()=>{
+
+modal.style.display="none";
+
+});
+
+window.addEventListener("click",(e)=>{
+
+if(e.target===modal){
+
+modal.style.display="none";
+
+}
+
+});
