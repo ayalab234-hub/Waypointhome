@@ -235,9 +235,15 @@ nav ul{
 
 display:flex;
 
-gap:38px;
+gap:40px;
 
 align-items:center;
+  
+list-style:none;
+
+margin:0;
+
+padding:0;
 
 }
 
@@ -286,7 +292,11 @@ nav a:hover::after{
 width:100%;
 
 }
+.nav-button{
 
+margin-left:auto;
+
+}
 /*=====================================================
 BUTTONS
 =====================================================*/
