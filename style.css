@@ -1591,3 +1591,352 @@ align-items:flex-start;
 }
 
 }
+/* ======================================================
+TABLETS
+====================================================== */
+
+@media screen and (max-width:1024px){
+
+.container{
+
+width:92%;
+
+}
+
+header .container{
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+gap:20px;
+
+}
+
+.logo img{
+
+width:180px;
+
+}
+
+nav ul{
+
+gap:22px;
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+}
+
+.hero{
+
+min-height:850px;
+
+}
+
+.hero-content{
+
+padding-top:140px;
+
+text-align:center;
+
+max-width:700px;
+
+margin:auto;
+
+}
+
+.hero-buttons{
+
+justify-content:center;
+
+}
+
+.services-grid,
+
+.membership-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.consultation-wrapper{
+
+grid-template-columns:1fr;
+
+gap:50px;
+
+}
+
+.consultation-photo{
+
+order:-1;
+
+}
+
+.contact-box{
+
+padding:60px 35px;
+
+}
+
+}
+
+/* ======================================================
+PHONE
+====================================================== */
+
+@media screen and (max-width:768px){
+
+header{
+
+padding:15px 0;
+
+}
+
+header .container{
+
+flex-direction:column;
+
+gap:18px;
+
+}
+
+.logo img{
+
+width:165px;
+
+}
+
+nav ul{
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+gap:16px;
+
+}
+
+.nav-button{
+
+display:none;
+
+}
+
+/* HERO */
+
+.hero{
+
+height:auto;
+
+min-height:100vh;
+
+}
+
+.hero-content{
+
+padding-top:170px;
+
+padding-left:25px;
+
+padding-right:25px;
+
+}
+
+.hero h1{
+
+font-size:48px;
+
+line-height:1;
+
+}
+
+.hero p{
+
+font-size:18px;
+
+max-width:100%;
+
+}
+
+.hero-buttons{
+
+flex-direction:column;
+
+gap:15px;
+
+}
+
+.hero-buttons a{
+
+width:100%;
+
+}
+
+/* SECTION TITLES */
+
+h2{
+
+font-size:40px;
+
+line-height:1.1;
+
+}
+
+.section-header{
+
+margin-bottom:45px;
+
+}
+
+/* SERVICES */
+
+.service-card{
+
+padding:30px;
+
+}
+
+/* MEMBERSHIP */
+
+.membership-card{
+
+padding:30px;
+
+}
+
+/* CONSULTATION */
+
+.consultation{
+
+padding:90px 0;
+
+}
+
+.consultation-text{
+
+text-align:center;
+
+}
+
+.consultation-text h2{
+
+font-size:44px;
+
+}
+
+.consultation-list{
+
+text-align:left;
+
+}
+
+.consultation-photo img{
+
+margin-top:20px;
+
+}
+
+/* FORM */
+
+.form-card{
+
+padding:35px;
+
+}
+
+.form-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.form-card button{
+
+width:100%;
+
+}
+
+/* CONTACT */
+
+.contact-box{
+
+padding:40px 25px;
+
+}
+
+.contact-buttons{
+
+flex-direction:column;
+
+gap:15px;
+
+}
+
+.contact-buttons a{
+
+width:100%;
+
+}
+
+/* FOOTER */
+
+.footer-container{
+
+text-align:center;
+
+}
+
+.footer-logo{
+
+width:170px;
+
+margin:auto;
+
+}
+
+}
+
+/* ======================================================
+SMALL PHONES
+====================================================== */
+
+@media screen and (max-width:480px){
+
+.hero h1{
+
+font-size:38px;
+
+}
+
+.hero p{
+
+font-size:17px;
+
+}
+
+h2{
+
+font-size:34px;
+
+}
+
+.logo img{
+
+width:145px;
+
+}
+
+.button-primary,
+
+.button-secondary{
+
+font-size:16px;
+
+padding:15px 20px;
+
+}
+
+}
