@@ -717,6 +717,127 @@ border-radius:28px;
 box-shadow:0 25px 60px rgba(0,0,0,.12);
 
 }
+/*=========================================
+CONSULTATION FORM
+=========================================*/
+
+.consultation-form{
+
+padding:120px 0;
+
+background:#ECE5DB;
+
+}
+
+.form-card{
+
+max-width:900px;
+
+margin:auto;
+
+background:white;
+
+padding:60px;
+
+border-radius:28px;
+
+box-shadow:0 20px 60px rgba(0,0,0,.08);
+
+}
+
+.form-card h2{
+
+margin-bottom:20px;
+
+}
+
+.form-card p{
+
+margin-bottom:40px;
+
+}
+
+.form-grid{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:20px;
+
+margin-bottom:20px;
+
+}
+
+.form-card input,
+
+.form-card select,
+
+.form-card textarea{
+
+width:100%;
+
+padding:18px;
+
+border:1px solid #ddd;
+
+border-radius:12px;
+
+font-size:16px;
+
+font-family:inherit;
+
+background:white;
+
+}
+
+.form-card textarea{
+
+margin-bottom:30px;
+
+resize:vertical;
+
+}
+
+.form-card input:focus,
+
+.form-card select:focus,
+
+.form-card textarea:focus{
+
+outline:none;
+
+border-color:#B7864C;
+
+}
+
+.form-card button{
+
+width:100%;
+
+font-size:18px;
+
+padding:18px;
+
+cursor:pointer;
+
+}
+
+@media(max-width:768px){
+
+.form-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.form-card{
+
+padding:35px;
+
+}
+
+}
 /*=====================================================
 CONTACT
 =====================================================*/
